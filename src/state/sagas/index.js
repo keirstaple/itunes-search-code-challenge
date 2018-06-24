@@ -18,7 +18,6 @@ function* searchArtists(action) {
     const data = yield call(() => get(uri));
     yield put(searchRequestSuccess({ data }));
   } catch (error) {
-    console.log(error);
     yield put(searchRequestFailure({ error }));
   }
 }

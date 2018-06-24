@@ -7,6 +7,8 @@ import {
 
 const getInitialState = () => ({
   searching: false,
+  data: {},
+  error: {},
 });
 
 const searchReducer = (state = getInitialState(), action) => {
@@ -14,9 +16,9 @@ const searchReducer = (state = getInitialState(), action) => {
     case SEARCH_ARTISTS_REQUEST:
       return { ...state, searching: true };
     case SEARCH_ARTISTS_REQUEST_SUCCESS:
-      return { ...state, searching: false, data: getProp('data.data')(action) };
+      return { ...state, searching: false, data: getProp('data.data')(action), error: {} };
     case SEARCH_ARTISTS_REQUEST_FAILURE:
-      return { ...state, searching: false, error: action.error };
+      return { ...state, searching: false, data: {}, error: action.error };
     default:
       return state;
   }
