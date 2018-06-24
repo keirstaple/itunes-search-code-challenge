@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+
+import SearchBox from './Home/searchBox';
 import '../styles/App.css';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div className="Home">
-        <p className="Home-intro">
-          To get started, edit and save to reload.
-        </p>
+        <SearchBox />
       </div>
     );
   }
