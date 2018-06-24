@@ -9,10 +9,12 @@ const SearchResults = ({ albumResults }) => (
   <div className="search-results">
     <span>Albums</span>
     { isEmpty(albumResults) && <NoResults /> }
-    { 
-      !isEmpty(albumResults)
-      && albumResults.map((values, id) => <AlbumTile key={id} album={values} />)
-    }
+    <div id="albums-container">
+      { 
+        !isEmpty(albumResults)
+        && albumResults.map((values, id) => <AlbumTile key={id} album={values} />)
+      }
+    </div>
   </div>
 );
 

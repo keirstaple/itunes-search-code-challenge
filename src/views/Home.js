@@ -4,7 +4,8 @@ import isEmpty from 'lodash/fp/isEmpty';
 
 import SearchBox from './home/searchBox';
 import SearchResults from './home/searchResults';
-import { albumResultsSelector } from '../state/selectors/search';
+import SearchError from './home/searchError';
+import { albumResultsSelector, searchErrorSelector } from '../state/selectors/search';
 import '../styles/App.css';
 
 class Home extends Component {
@@ -12,12 +13,12 @@ class Home extends Component {
     super(props);
   }
   render() {
-    const { albumResults } = this.props;
-    console.log(albumResults);
+    const { albumResults, searchError } = this.props;
     return (
       <div className="Home">
         <SearchBox />
         { !isEmpty(albumResults) && <SearchResults albumResults={albumResults} /> }
+        { !isEmpty(searchError) && <SearchError /> }
       </div>
     );
   }
@@ -25,6 +26,7 @@ class Home extends Component {
 
 export default connect(
   state => ({
+    searchError: searchErrorSelector(state),
     albumResults: albumResultsSelector(state),
   }),
 )(Home);
