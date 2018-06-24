@@ -3,8 +3,6 @@ import { get } from 'axios';
 
 import {
   SEARCH_ARTISTS_REQUEST,
-  SEARCH_ARTISTS_REQUEST_SUCCESS,
-  SEARCH_ARTISTS_REQUEST_FAILURE,
 } from '../actionTypes/search';
 
 import { searchRequestSuccess, searchRequestFailure } from '../actions/search';
