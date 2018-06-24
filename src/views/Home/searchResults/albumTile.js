@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlbumTile = ({ album }) => (
-  <div>{album.title}</div>
+const AlbumTile = ({ album: { title, collection } }) => (
+  <div>
+    { collection.length && <img src={collection[0]['artworkUrl100']} /> }
+    <div>{title}</div>
+  </div>
 );
 
 AlbumTile.propTypes = {

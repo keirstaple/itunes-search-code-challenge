@@ -7,7 +7,7 @@ import NoResults from './searchResults/noResults';
 
 const SearchResults = ({ albumResults }) => (
   <div className="search-results">
-    <span>Results</span>
+    <span>Albums</span>
     { isEmpty(albumResults) && <NoResults /> }
     { 
       !isEmpty(albumResults)
