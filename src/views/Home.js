@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import isEmpty from 'lodash/fp/isEmpty';
 
-import SearchBox from './home/searchBox';
-import SearchResults from './home/searchResults';
-import SearchError from './home/searchError';
+import SearchBox from './Home/searchBox';
+import SearchResults from './Home/searchResults';
+import SearchError from './Home/searchError';
 import { albumResultsSelector, searchErrorSelector } from '../state/selectors/search';
 import '../styles/App.css';
 
