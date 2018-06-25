@@ -9,9 +9,6 @@ import { albumResultsSelector, searchErrorSelector } from '../state/selectors/se
 import '../styles/App.css';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { albumResults, searchError } = this.props;
     return (

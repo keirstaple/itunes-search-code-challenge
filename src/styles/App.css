@@ -1,14 +1,57 @@
+.Home {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.search-box {
+  height: 25px;
+  min-width: 200px;
+}
+
+.search-box-input {
+  width: 100%;
+  height: 100%;
+}
+
 #albums-container {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
 }
 
 .album-tile {
-  width: 150px;
-  margin: 10px;
+  width: 18%;
+  margin: 1%;
+  min-width: 150px;
+  height: auto;
+}
+
+.album-tile > h5 {
+  margin: 0;
+  font-weight: lighter;
+}
+
+.search-results {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.albums-header {
+  margin: 0 1%;
+  padding: 15px 0;
+  border-bottom: 1px solid grey;
 }
 
 .album-tile img {
-  width: 75%;
-  height: 75%;
+  width: 100%;
+  height: auto;
+}
+
+.search-error {
+  margin-top: 15px;
 }

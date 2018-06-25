@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 import isEmpty from 'lodash/fp/isEmpty';
 
 import AlbumTile from './searchResults/albumTile';
-import NoResults from './searchResults/noResults';
 
 const SearchResults = ({ albumResults }) => (
   <div className="search-results">
-    <span>Albums</span>
-    { isEmpty(albumResults) && <NoResults /> }
+    <h4 className="albums-header">Albums</h4>
     <div id="albums-container">
       { 
         !isEmpty(albumResults)
