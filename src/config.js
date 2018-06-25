@@ -1,3 +1,3 @@
 export default {
-  apiBase: 'https://itunes.apple.com/search?term=',
+  apiBase: 'https://itunes.apple.com/search?term= ',
 };

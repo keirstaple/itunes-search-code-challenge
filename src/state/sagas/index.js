@@ -13,7 +13,7 @@ function* searchArtists(action) {
   const uri = `${config.apiBase}${encodeURIComponent(searchTerm)}`;
 
   try {
-    const data = yield call(() => get(uri).then((result) => result));
+    const data = yield call(() => get(uri));
     yield put(searchRequestSuccess({ data }));
   } catch (error) {
     yield put(searchRequestFailure({ error }));
