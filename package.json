@@ -7,14 +7,12 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "history": "^4.7.2",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-router-redux": "^4.0.8",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1"

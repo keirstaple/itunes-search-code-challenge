@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import isEmpty from 'lodash/fp/isEmpty';
 
 import SearchBox from './home/searchBox';
@@ -19,6 +20,11 @@ class Home extends Component {
       </div>
     );
   }
+}
+
+Home.propTypes = {
+  albumResults: PropTypes.array,
+  searchError: PropTypes.object,
 }
 
 export default connect(
