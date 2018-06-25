@@ -1,5 +1,6 @@
 {
   "name": "itunes-search",
+  "homepage": "https://keirstaple.github.io/itunes-search-code-challenge",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -7,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^1.2.0",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
@@ -18,6 +20,8 @@
     "reselect": "^3.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
